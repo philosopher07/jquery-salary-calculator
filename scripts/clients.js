@@ -10,14 +10,14 @@ let employee = [];
 
 
 function displayEmployee() {
-    let el = $( 'employeeOut' )
+    let el = $( '#employeeOut' )
     // empty tr
     el.empty();
     // loop thru employee
     for(let i=0; i<employee.length;i++){
         // append each input to tr
         el.append(`<td>
-        ${employee[ i ].firstname}
+        ${employee[ i ].firstName}
         </td>`)
     } //end for loop
 }// end displayEmployee
