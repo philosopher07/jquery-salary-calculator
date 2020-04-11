@@ -10,7 +10,7 @@ let employee = [];
 
 function deleteRow() {
     console.log('in deleteRow');
-    
+    $(this).parent().parent().remove();
 }
 
 
@@ -18,6 +18,8 @@ function displayEmployee() {
     let el = $( '#tbody' )
     // empty tr
     el.empty();
+    // totalMonthly
+    let totalMonthly = 0;
     // loop thru employee
     for(let i=0; i<employee.length;i++){
         // append each input to tr
@@ -28,6 +30,11 @@ function displayEmployee() {
         <td> ${employee [i].annualSalary}</td>
         <td><button class="deleteBtn">Delete</button></td></tr>`       
         )
+        //
+        totalMonthly += parseInt(employee[i].annualSalary / 12);
+        console.log(totalMonthly);
+               
+        $('#targetTotal').empty().append(totalMonthly)
         } //end for loop
      $('.deleteBtn').on('click', deleteRow)
 }// end displayEmployee
