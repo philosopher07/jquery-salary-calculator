@@ -9,6 +9,7 @@
     <script src="./scripts/clients.js"></script>
     <title>Salary Calculator</title>
 </head>
+
 <body class="container">
     <header class="jumbotron">
         <h1>Salary Calculator</h1>
@@ -20,13 +21,13 @@
         <input id="idIn" type="number" placeholder="ID">
         <input id="titleIn" type="text" placeholder="Title">
         <input id="annualIn" type="number" placeholder="Annual Salary">
-        <button id="submitButton">Submit</button>
+        <button id="submitButton" class="btn btn-primary">Submit</button>
     </div>
     <div id="outputField">
         <h2>Employees</h2>
         <div id="employees">
             <table class = "table table-striped" id="table">
-                <thead>
+                <thead class="thead-dark">
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
@@ -51,4 +52,5 @@
     </div>
     <div id="totalM">Total Monthly:<span id="targetTotal"></span>$</div>
 </body>
+
 </html>
