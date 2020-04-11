@@ -1,3 +1,7 @@
-#totalMonthly {
+#totalM {
     text-align: right;
+}
+
+.red {
+    background-color: red;
 }

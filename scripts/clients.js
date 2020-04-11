@@ -18,7 +18,7 @@ function displayEmployee() {
     let el = $( '#tbody' )
     // empty tr
     el.empty();
-    // totalMonthly
+    // totalMonthly variable 
     let totalMonthly = 0;
     // loop thru employee
     for(let i=0; i<employee.length;i++){
@@ -30,11 +30,15 @@ function displayEmployee() {
         <td> ${employee [i].annualSalary}</td>
         <td><button class="deleteBtn">Delete</button></td></tr>`      
         )
-        //
-        totalMonthly += parseInt(employee[i].annualSalary / 12);
+        // grab input from annualSalary and divide by 12 for monthly cost
+        totalMonthly += Number(`${employee[i].annualSalary}`) / 12;
         console.log(totalMonthly);
-               
-        $('#targetTotal').empty().append(totalMonthly)
+        // append monthly cost to DOM
+        $('#targetTotal').empty().append(totalMonthly);
+        if (totalMonthly > 20000) {
+            //add red background if totolMonthly more than 20,000
+            $('#totalM').addClass('red')
+        }
         } //end for loop
      $('.deleteBtn').on('click', deleteRow)
 }// end displayEmployee
