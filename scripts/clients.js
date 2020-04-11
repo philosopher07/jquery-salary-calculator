@@ -28,7 +28,7 @@ function displayEmployee() {
         <td> ${employee [i].id}</td>
         <td> ${employee [i].title}</td>
         <td> ${employee [i].annualSalary}</td>
-        <td><button class="deleteBtn">Delete</button></td></tr>`       
+        <td><button class="deleteBtn">Delete</button></td></tr>`      
         )
         //
         totalMonthly += parseInt(employee[i].annualSalary / 12);
