@@ -8,6 +8,11 @@ function readyNow() {
 
 let employee = [];
 
+function deleteRow() {
+    console.log('in deleteRow');
+    
+}
+
 
 function displayEmployee() {
     let el = $( '#tbody' )
@@ -20,10 +25,14 @@ function displayEmployee() {
         <td> ${employee [i].lastName}</td>
         <td> ${employee [i].id}</td>
         <td> ${employee [i].title}</td>
-        <td> ${employee [i].annualSalary}</td></tr>`       
+        <td> ${employee [i].annualSalary}</td>
+        <td><button class="deleteBtn">Delete</button></td></tr>`       
         )
         } //end for loop
+     $('.deleteBtn').on('click', deleteRow)
 }// end displayEmployee
+
+
 
 
 function submit() {
