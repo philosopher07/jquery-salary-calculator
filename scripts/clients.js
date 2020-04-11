@@ -10,21 +10,24 @@ let employee = [];
 
 
 function displayEmployee() {
-    let el = $( '#employeeOut' )
+    let el = $( '#tbody' )
     // empty tr
     el.empty();
     // loop thru employee
     for(let i=0; i<employee.length;i++){
         // append each input to tr
-        el.append(`<td>
-        ${employee[ i ].firstName}
-        </td>`)
-    } //end for loop
+        el.append(`<tr><td> ${employee [i].firstName}</td>
+        <td> ${employee [i].lastName}</td>
+        <td> ${employee [i].id}</td>
+        <td> ${employee [i].title}</td>
+        <td> ${employee [i].annualSalary}</td></tr>`       
+        )
+        } //end for loop
 }// end displayEmployee
 
 
 function submit() {
-    console.log('in submit');
+   // console.log('in submit');
     let itemToAdd= {
         firstName: $('#firstIn').val(),
         lastName: $('#lastIn').val(),
@@ -32,6 +35,10 @@ function submit() {
         title: $('#titleIn').val(),
         annualSalary:$('#annualIn').val()
     }//end itemToAdd
+    console.log("employee to add:", itemToAdd);
+    console.log('list of employees:', employee);
+    
+    
     //push value to employess
     employee.push(itemToAdd);
     
