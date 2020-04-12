@@ -68,5 +68,7 @@ function submit() {
     $('#idIn').val('');
     $('#titleIn').val('');
     $('#annualIn').val('');
+    console.log(employee);
+    
     displayEmployee();
 }// end submit
